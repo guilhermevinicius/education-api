@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push the images to Docker Hub
-        run: docker push guilhermevinicius/education-api
+        run: docker push guilhermevinicius/education-api:v1
