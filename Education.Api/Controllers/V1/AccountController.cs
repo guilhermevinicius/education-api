@@ -14,27 +14,20 @@ public class AccountController(IMediator mediator) : EducationBaseController
     {
         return Ok();
     }
-    
+
     [HttpPost("signin")]
     public async Task<IActionResult> SignIn(SignInDto signInDto, CancellationToken cancellationToken)
     {
-        var accessToken = await mediator.Send(new SignInInput
-        {
-            Email = signInDto.Email,
-            Password = signInDto.Password
-        }, cancellationToken);
+        var accessToken = await mediator.Send(new SignInInput(signInDto.Email, signInDto.Password),
+            cancellationToken);
         return Ok(accessToken);
     }
-    
+
     [HttpPost("signup")]
     public async Task<IActionResult> SignUp(SignUpDto signUpDto, CancellationToken cancellationToken)
     {
-        var user = await mediator.Send(new CreateUserInput
-        {
-            Name = signUpDto.Name,
-            Email = signUpDto.Email,
-            Password = signUpDto.Password
-        }, cancellationToken);
+        var user = await mediator.Send(new CreateUserInput(signUpDto.Name, signUpDto.Email, signUpDto.Password)
+            , cancellationToken);
         return Ok(user);
     }
 }

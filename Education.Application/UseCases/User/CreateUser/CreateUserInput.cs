@@ -3,9 +3,9 @@ using MediatR;
 
 namespace Education.Application.UseCases.User.CreateUser;
 
-public class CreateUserInput : IRequest<UserOutputModel>
+public class CreateUserInput(string name, string email, string password) : IRequest<UserOutputModel>
 {
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public string Name { get; set; } = name;
+    public string Email { get; set; } = email;
+    public string Password { get; set; } = password;
 }

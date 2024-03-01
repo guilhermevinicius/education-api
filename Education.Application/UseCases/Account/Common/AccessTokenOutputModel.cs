@@ -1,6 +1,6 @@
 namespace Education.Application.UseCases.Account.Common;
 
-public class AccessTokenOutputModel()
+public class AccessTokenOutputModel(string accessToken)
 {
-    public string AccessToken { get; set; }
+    public string AccessToken { get; set; } = accessToken;
 }

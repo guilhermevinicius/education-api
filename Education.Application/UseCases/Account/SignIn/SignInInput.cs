@@ -3,8 +3,8 @@ using MediatR;
 
 namespace Education.Application.UseCases.Account.SignIn;
 
-public class SignInInput : IRequest<AccessTokenOutputModel>
+public class SignInInput(string email, string password) : IRequest<AccessTokenOutputModel>
 {
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public string Email { get; set; } = email;
+    public string Password { get; set; } = password;
 }

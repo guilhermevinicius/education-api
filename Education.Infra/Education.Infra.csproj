@@ -10,16 +10,4 @@
       <ProjectReference Include="..\Education.Domain\Education.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="BCrypt.Net" Version="0.1.0" />
-      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.24.0" />
-      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.24.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
-        <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.2\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
 </Project>

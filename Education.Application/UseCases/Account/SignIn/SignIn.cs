@@ -21,6 +21,6 @@ public class SignIn(
 
         var accessToken = await generateJwt.Generate(user);
 
-        return new AccessTokenOutputModel { AccessToken = accessToken };
+        return new AccessTokenOutputModel (accessToken);
     }
 }
