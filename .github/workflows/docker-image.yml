@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker Image
-        run: docker build . -t guilhermevinicius/education-api:latest
+        run: docker build . -t guilhermevinicius/education-api:v1
       - name: Log into Docker Hub
         uses: docker/login-action@v2
         with:
